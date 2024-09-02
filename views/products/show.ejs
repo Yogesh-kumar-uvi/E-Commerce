@@ -1,13 +1,6 @@
 <% layout('layouts/boilerplate') -%>
 
 <section class="container">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 5d423f7 (completed)
->>>>>>> f47a1c3 (Reinitialized repository and added all files)
 
     <%- include('../partials/flash')  %> 
 
@@ -39,44 +32,6 @@
             <h1 class="display-6">Leave Your Review</h1>
 
             <form action="/products/<%=product._id%>/review" method="POST">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-    <%- include('../partials/flash')  %> 
-
-    <div class="row">
-        <div class="col-lg-6 mb-4"> 
-            <div class="card shadow-sm mx-auto" style="width: 22rem;">
-                <img src="<%= product.img %>" class="card-img-top" alt="item image">
-                <div class="card-body">
-                    <h5 class="card-title"><%= product.name %></h5>
-                    <p class="card-text"><%= product.desc %></p>
-                    <h5 class="card-title">$ <%= product.price %></h5>
-
-                    <a href="#" class="btn btn-success btn-sm">Buy</a>
-                    
-                    <form class="d-inline-block" action="/user/<%= product._id %>/add" method="POST">
-                        <button class="btn btn-primary btn-sm">Add To Cart</button> 
-                    </form>
-                    <% if (currentUser && currentUser.role === 'seller') { %>
-                        <a href="/products/<%= product._id %>/edit" class="btn btn-info btn-sm">Edit</a>
-                        <form class="d-inline-block" action="/products/<%= product._id %>?_method=DELETE" method="POST">
-                            <button class="btn btn-sm btn-danger">Delete</button>
-                        </form>
-                    <% } %>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 reviews-section mx-auto my-2">
-            <h1 class="display-6">Leave Your Review</h1>
-
-            <form action="/products/<%= product._id %>/review" method="POST">
->>>>>>> fb35fb3 (yet to add payment getway)
->>>>>>> 5d423f7 (completed)
->>>>>>> f47a1c3 (Reinitialized repository and added all files)
                 <div>
                     <fieldset class="starability-basic">
                         <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
@@ -99,13 +54,6 @@
                 <button class="btn btn-success btn-sm">Submit</button>
             </form>
             <div class="my-3">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 5d423f7 (completed)
->>>>>>> f47a1c3 (Reinitialized repository and added all files)
                 <%for(let review of product.reviews){%>
                     <div class="card mb-3">
                         <div class="card-body">
@@ -120,29 +68,4 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
 </section>
-=======
-<<<<<<< HEAD
-</section>
-=======
-</section>
-=======
-                <% for (let review of product.reviews) { %>
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <p class="starability-result" data-rating="<%= review.rating %>">
-                                Rated: <%= review.rating %> stars
-                            </p>
-                            <p class="card-text"><%- review.comment %></p>
-                            <button class="btn btn-danger btn-sm">Delete</button>
-                        </div>
-                    </div>
-                <% } %>
-            </div>
-        </div>
-    </div>
-</section>
->>>>>>> fb35fb3 (yet to add payment getway)
->>>>>>> 5d423f7 (completed)
->>>>>>> f47a1c3 (Reinitialized repository and added all files)
