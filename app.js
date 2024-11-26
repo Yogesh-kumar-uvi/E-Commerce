@@ -16,7 +16,7 @@ const User = require('./models/User');
 const seedDB = require('./seed')
 const MongoStore = require('connect-mongo');
 
-const dbURL = process.env.dbURL || 'mongodb://localhost:27017/shopping-app';
+const dbURL = process.env.dbURL ;
 
 mongoose.set('strictQuery', true);
 mongoose.connect(dbURL)

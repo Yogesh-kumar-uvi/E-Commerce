@@ -8,11 +8,6 @@ router.post('/product/:productId/like' , isLoggedIn , async(req,res)=>{
     let user = req.user;
     let isLiked = user.wishList.includes(productId);
 
-    // if(isLiked){
-    //     User.findByIdAndUpdate(req.user._id , {$pull:{wishList:productId}})
-    // }else{
-    //     User.findByIdAndUpdate(req.user._id , {$addToSet:{wishList:productId}})
-    // }
 
     const option = isLiked? '$pull' : '$addToSet';
     //the below code can be done by else if as well
