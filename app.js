@@ -16,10 +16,10 @@ const User = require('./models/User');
 const seedDB = require('./seed')
 const MongoStore = require('connect-mongo');
 
-const dbURL = process.env.dbURL ;
+const MONGO_URL = process.env.MONGO_URL ;
 
 mongoose.set('strictQuery', true);
-mongoose.connect(dbURL)
+mongoose.connect(MONGO_URL)
     .then(() => console.log('DB Connected'))
     .catch((err) => console.log(err));
 
@@ -35,7 +35,7 @@ let secret = process.env.SECRET || 'weneedabettersecretkey';
 
 let store = MongoStore.create({
     secret:secret,
-    mongoUrl: dbURL,
+    mongoUrl: MONGO_URL,
     touchAfter:24*60*60
 })
 
