@@ -15,9 +15,9 @@ const LocalStrategy = require('passport-local');
 const MongoStore = require('connect-mongo');
 const User = require('./models/User');
 
-const MONGO_URL = process.env.MONGO_URL; // MongoDB connection string
+const MONGO_URL = process.env.MONGO_URL; 
 const SECRET = process.env.SECRET || 'weneedabettersecretkey';
-const PORT = process.env.PORT || 5000; // Default to 5000 if not specified
+const PORT = process.env.PORT || 5000; 
 
 mongoose.set('strictQuery', true);
 mongoose
